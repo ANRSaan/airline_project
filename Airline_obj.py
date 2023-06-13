@@ -1,6 +1,11 @@
 from datetime import date
 from typing import Optional
 from pydantic import BaseModel, StrictStr
+import json
+
+with open("preferences") as f:
+    data = json.load(f)
+
 
 class Preferences(BaseModel):
     start: date
@@ -9,15 +14,6 @@ class Preferences(BaseModel):
     destination: StrictStr
     travelers: int
 
-
-test_dict = {
-    'start' : '2023-06-21',
-    'end' : '2023-06-27',
-    'origin' : 'Seattle',
-    'destination' : 'New York',
-    'travelers' : 2
-}
-
-traveler = Preferences.parse_obj(test_dict)
+traveler = Preferences.parse_obj(data)
 
 print(traveler.dict())
