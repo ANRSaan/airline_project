@@ -1,5 +1,7 @@
-'start' : '2023-06-21',
-'end' : '2023-06-27',
-'origin' : 'Seattle',
-'destination' : 'New York',
-'travelers' : 2
+{
+    "start" : "2023-06-21",
+    "end" : "2023-06-27",
+    "origin" : "Seattle",
+    "destination" : "New York",
+    "travelers" : 2
+}
