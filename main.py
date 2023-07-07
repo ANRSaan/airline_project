@@ -2,7 +2,7 @@ from datetime import date
 from typing import Optional
 from pydantic import BaseModel, StrictStr
 import json
-from Airline_obj import Preferences, traveler
+from Airline_obj import Preferences
 from Airline_return import AirlineList
 
 AIRLINES = ['southwest', 'alaska']

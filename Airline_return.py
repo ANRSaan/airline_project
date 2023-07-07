@@ -4,12 +4,12 @@ from pydantic import BaseModel, StrictStr
 import json
 from Airline_obj import traveler
 
-class AirlineList:
+class Searcher:
     def __init__(self, airlines: list) -> None:
         self.airlines = airlines
         pass
 
-    def airline_getter(self, traveler):
+    def airline_search(self, traveler):
         for airline in self.airlines:
             launch_specific_selenium()
         results = {}
@@ -26,9 +26,3 @@ class AirlineList:
         '''
 
         return results
-    
-    def airline_parser(results):
-        """
-            This is the bit where we take the results from airline_getter
-            and spread them out into something the user can look at.
-        """
