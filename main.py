@@ -3,9 +3,9 @@ from typing import Optional
 from pydantic import BaseModel, StrictStr
 import json
 from Airline_obj import Preferences
-from Airline_return import AirlineList
+from Airline_return import Searcher
 
-AIRLINES = ['southwest', 'alaska']
+AIRLINES = [Preferences.airlines]
 
 def main():
     with open("preferences") as f:
@@ -14,8 +14,5 @@ def main():
 
     traveler = Preferences.parse_obj(data)
     searcher = Searcher(airlines=AIRLINES)
-    searcher.search(traveler)
-
-    results = AirlineList.airline_getter(traveler)
-
-    AirlineList.airline_parser(results)
+    
+    results = searcher.airline_search(traveler)

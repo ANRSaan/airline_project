@@ -3,5 +3,6 @@
     "end" : "2023-06-27",
     "origin" : "Seattle",
     "destination" : "New York",
-    "travelers" : 2
+    "travelers" : 2,
+    "airlines" : "United"
 }

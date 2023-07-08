@@ -1,15 +1,14 @@
 from datetime import date
 from typing import Optional
 from pydantic import BaseModel, StrictStr
-import json
-from Airline_obj import traveler
+import pandas
 
 class Searcher:
     def __init__(self, airlines: list) -> None:
         self.airlines = airlines
         pass
 
-    def airline_search(self, traveler):
+    def airline_search(self, Preferences):
         for airline in self.airlines:
             launch_specific_selenium()
         results = {}
@@ -26,3 +25,9 @@ class Searcher:
         '''
 
         return results
+    
+    def results(self, results, Preferences):
+        '''
+            This is where the Selenium results object gets put into a csv file,
+            based around the original Preferences object.
+        '''

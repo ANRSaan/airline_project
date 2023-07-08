@@ -10,3 +10,4 @@ class Preferences(BaseModel):
     origin: StrictStr
     destination: StrictStr
     travelers: int
+    airlines: StrictStr
